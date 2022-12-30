@@ -1,0 +1,10 @@
+DROP USER IF EXISTS 'hostname'@'hostname';
+CREATE USER 'hostname'@'ip' IDENTIFIED BY 'password' WITH MAX_QUERIES_PER_HOUR 60 MAX_CONNECTIONS_PER_HOUR 60 MAX_UPDATES_PER_HOUR 60;
+
+GRANT ALL PRIVILEGES ON * . * TO 'hostname'@'ip' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `acore_world` . * TO 'hostname'@'ip' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `acore_characters` . * TO 'hostname'@'ip' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `acore_auth` . * TO 'hostname'@'ip' WITH GRANT OPTION;
