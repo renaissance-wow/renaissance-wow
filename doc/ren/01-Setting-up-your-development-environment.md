@@ -135,3 +135,31 @@ Finally, set the newly created account as an administrator. This will give you a
 
 AC> account set gmlevel <user> <level> <realm; -1 for all realms>
 ```
+
+### Set client realmlist
+
+Finally, you'll need to change the realmlist of your 3.3.5a client. If you don't
+have a client, we highly recommend torrenting
+[Truekripp's Ultimate WotLK Graphics Boost client from the Warmane forums](https://forum.warmane.com/showthread.php?t=433477).
+
+<details><summary>Click here to download the torrent file</summary>
+<p>
+[Download Truekripp's Ultimate WotLK Graphics Boost client]
+</p>
+</details>
+
+In your WoW client installation, navigate to `Data/enUS/` and open
+`realmlist.wtf` in a text editor of your choice. Notepad, vim, nano, and
+textedit are all great choices.
+
+Edit this file to say
+```
+set realmlist 127.0.0.1
+```
+
+Save the file and close the text editor. `127.0.0.1` is a special IP address
+that points back to your own machine. This will tell the WoW client to point to
+a WoW server running on your own machine.
+
+Now you should be able to launch your WoW client and log in to a server running
+entirely in Docker containers on your own machine!
