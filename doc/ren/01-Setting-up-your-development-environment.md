@@ -123,15 +123,15 @@ Use the following command to do so.
 AC> account create <user> <pass>
 ```
 
+Finally, set the newly created account as an administrator. This will give you access to
+[these commands](https://www.azerothcore.org/wiki/gm-commands) while in-game.
+
+```bash
 # level -> Role name
 # 0     -> SEC_PLAYER
 # 1     -> SEC_MODERATOR
 # 2     -> SEC_GAMEMASTER
 # 3     -> SEC_ADMINISTRATOR
 
-Finally, set the newly created account as an administrator. This will give you access to
-[these commands](https://www.azerothcore.org/wiki/gm-commands) while in-game.
-
-```bash
 AC> account set gmlevel <user> <level> <realm; -1 for all realms>
 ```
